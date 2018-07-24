@@ -11,7 +11,6 @@ Target audience includes teenagers with a financial constraint that have access 
 
 From the player perspective, the user will have to log-in, fill required information, upload profile picture and highlight videos.
 
-
 # Technical
 ## Models
 - User
@@ -21,20 +20,23 @@ From the player perspective, the user will have to log-in, fill required informa
 
 ## Views
 - Home (scrolling webpage)
-- Recommendation Form for other players (V2)
 - User
 - Login/Sign Up
+- Recommendation Form for other players (V2)
 
 ## Routes
 - Index/Home
     - GET `www.reddit.com/`
 - Login
+    - GET `www.reddit.com/auth/login`
     - POST `www.reddit.com/auth/login`
 - Sign Up
     - POST  `www.reddit.com/auth/signup`
 - User
     - GET  `www.reddit.com/user/:user_id`
-    - PUT `www.reddit.com/user/:user_id`
+    - POST `www.reddit.com/user/:user_id`
+    - PUT  `www.reddit.com/user/:user_id`
+    - DELETE `www.reddit.com/user/:user_id`
 - Recommendation (V2)
     - GET `www.reddit.com/r/:subreddit_id/comments/:comment_id`
     - POST `www.reddit.com/r/:subreddit_id/comments/:comment_id`
@@ -42,20 +44,22 @@ From the player perspective, the user will have to log-in, fill required informa
     - DELETE `www.reddit.com/r/:subreddit_id/comments/:comment_id`
 
 
-
 # Weekly Milestones
 ## Week 4 - Usable Build
-- Paper prototype and first round of user feedback
+- Paper prototype
 - Basic Server Setup
     - Can view home page
-- Login page
+- Youtube video uploading feature
 - CRUD for User
+- User testing of MVP
 
 ## Week 5 - Feature Complete
 
+- Login page, password encryption
 - Optimize routes
 - Ensure everything works, so far
 - Style website
+- Nice to have: Player recommendation
 
 ## Week 6 - Polish + Prepare to Push Live
 - CSS / Bootstrap
@@ -64,4 +68,4 @@ From the player perspective, the user will have to log-in, fill required informa
 - Test with multiple users
 - Test features
 - Stress test (try to break application)
-- Now fix as much as possible
+- Final fixes
