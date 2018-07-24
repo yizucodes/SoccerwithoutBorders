@@ -6,10 +6,10 @@ Soccer without Borders is a website aimed for under-represented soccer players w
 
 Target audience includes teenagers with a financial constraint that have access to the internet and video-making device. These teenagers are confident in their soccer abilities developed by playing in streets and parks who hope to get scouted and recruited by established local soccer clubs.
 
-
 ## Experience
 
 From the player perspective, the user will have to log-in, fill required information, upload profile picture and highlight videos.
+![PaperPrototype](Documents/Github/SoccerwithoutBorders/images/PaperPrototype.jpg)
 
 # Technical
 ## Models
