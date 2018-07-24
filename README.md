@@ -9,7 +9,7 @@ Target audience includes teenagers with a financial constraint that have access 
 ## Experience
 
 From the player perspective, the user will have to log-in, fill required information, upload profile picture and highlight videos.
-![PaperPrototype](Documents/Github/SoccerwithoutBorders/images/PaperPrototype.jpg)
+![PaperPrototype](/Users/yizu/Documents/GitHub/SoccerwithoutBorders/public/images/PaperPrototype.jpeg)
 
 # Technical
 ## Models
