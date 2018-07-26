@@ -38,4 +38,20 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.error = req.app.get('env') ==='development' ? err : {};
+  // render the error page
+  res.status(err.status || 500);
+
+// Database setup
+const mongoose = require('mongoose');
+const mongoURI = 'mongodb://swb-user:swbuser1@ds255451.mlab.com:55451/swb';
+
+mongoose.connect(mongoURI)
+mongoose.Promise = global.Promise;
+let db = mongoose.connection;
+db.on('error', console.error.bind(console,'MongoDB connection error:'));
+
+
 module.exports = app;
