@@ -1,85 +1,14 @@
-<html>
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<div>
+    <form action="/users" method="post">
+        <legend>New User</legend>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
-  </head>
-</html>
-<!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Soccer Without Borders</span>
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Player Bio</a>
-        <a class="mdl-navigation__link" href="">Player Highlights</a>
-        <a class="mdl-navigation__link" href="">School Info</a>
-        <a class="mdl-navigation__link" href="">TBD</a>
-        <button id="logoutbutton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Log Out</button>
-      </nav>
-    </div>
-  </header>
-
-<main class="mdl-layout__content">
-  <div class="page-content">
-        Player Bio
-    <div class="mdl-grid">
-
-<!-- Figure out how to add profile image with specific size -->
-    <div class="mdl-cell mdl-cell--4-col">Profile picture</div>
-
-    <div class="mdl-cell mdl-cell--4-col">
-      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-        <tbody>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input required type="text" name="playername" maxlength="30" class="mdl-textfield__input" id="bio-playername">
-            <label class="mdl-textfield__label" for="bio-playername">Name</label>
+        <div class="form-group">
+            <label for="user-username">Username</label>
+            <input type="text" name="username" class="form-control" id="user-username" placeholder="Username">
         </div>
 
-<form class="" action="" id="playerbio" method="post" name="playerbio">
-  
-          <tr>
-            <th>Age (years)</th>
-            <td>
-              <input required type="number" name="playerage" class="mdl-number__input" id="bio-playername" min="1" max="30">
-            </td>
-          </tr>
-
-          <tr>
-            <th>Hometown (City, State, Country)</th>
-            <td>
-              <input required type="text" name="playerhometown" maxlength="300" class="mdl-textfield__input" id="bio-playerhometown">
-            </td>
-          </tr>
-
-          <tr>
-            <th>Height (ft.in)</th>
-            <td>
-              <input required type="number" name="playerheight" class="mdl-number__input" id="bio-playerheight" min="1" max="8.5">
-            </td>
-          </tr>
-
-          <tr>
-            <th>Weight (lbs)</th>
-            <td>
-              <input required type="number" name="playerweight" class="mdl-number__input" id="bio-playerweight" min="1" max="500">
-            </td>
-          </tr>
-
-        </tbody>
-      </table>
-</form>
-
-    <div class="mdl-cell mdl-cell--4-col">4</div>
-  </div>
-        <!-- Your content goes here --></div>
-    </main>
-  </div>
+        <div class="text-right">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
