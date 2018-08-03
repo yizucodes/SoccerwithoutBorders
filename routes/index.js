@@ -1,11 +1,13 @@
 const express = require('express');
+
 const router = express.Router();
 const User = require('../models/user');
 
 // set layout variables
-router.use(function (req, res, next) {
-  res.locals.title = "Soccer Without Borders";
+router.use(function(req, res, next) {
+  res.locals.title = "Soccer without Borders";
   res.locals.currentUserId = req.session.userId;
+
   next();
 });
 
@@ -30,9 +32,22 @@ router.post('/login', (req, res, next) => {
     } else {
       req.session.userId = user._id;
 
-      return res.redirect('/');
+      return res.redirect('/') ;
     }
   });
 });
+
+//logout
+router.get('/logout', (req, res, next) => {
+  if (req.session) {
+    req.session.destroy((err) => {
+      if (err) return next(err);
+    });
+  }
+
+  return res.redirect('/login');
+});
+
+module.exports = router;
 
 module.exports = router;
