@@ -6,7 +6,6 @@ const User = require('../models/user');
 router.use(function (req, res, next) {
   res.locals.title = "Soccer Without Borders";
   res.locals.currentUserId = req.session.userId;
-
   next();
 });
 
