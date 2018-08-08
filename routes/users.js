@@ -30,6 +30,25 @@ router.post('/', (req, res, next) => {
     if (err) console.log(err);
     return res.redirect('/users');
   });
-})
+});
+//
+// // Rooms show
+// router.get('/:id', auth.requireLogin, (req, res, next) => {
+//   Room.findById(req.params.id, function(err, room) {
+//     if(err) { console.error(err) };
+//
+//     res.render('rooms/show', { room: room });
+//   });
+// });
+
+//Finding user profile after Login - how do I make this to work?
+
+router.get('/login', auth.requireLogin, (req, res) => {
+  User.findbyId(req.params.id, (err, user) => {
+    if (err) { console.log(err); }
+    res.render('users/index', { user: user });
+  });
+});
+
 
 module.exports = router;

@@ -1,9 +1,26 @@
-<div>
-  Users Index
+<div class="left">
+  <h3>Player Bio</h3>
 </div>
 
-<ul>
-  {{#each users as |user|}}
-  <li>{{user.username}}</li>
-  {{/each}}
-</ul>
+<table class="fullTable mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Name and Last Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Hometown</th>
+      <th>Height (ft.in)</th>
+      <th>Weight (lbs)</th>
+  </thead>
+    <tbody>
+      <tr>
+        <td> {{user.name}} </td>
+        <td> {{user.age}} </td>
+        <td> {{user.gender}} </td>
+        <td>{{user.hometown}}</td>
+        <td>{{user.height}}</td>
+        <td>{{user.weight}}</td>
+      </tr>
+      </tbody>
+
+  </table>

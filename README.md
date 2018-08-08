@@ -50,13 +50,13 @@ From the player perspective, the user will have to log-in, fill required informa
 - Paper prototype
 - Basic Server Setup
     - Can view home page
-- Text, number and date fields 
+- Text, number and date fields
 - Youtube video uploading feature
 - CRUD for User
 - User testing of MVP
 
 ## Week 5 - Feature Complete
-- Login page, password encryption using bcryptjs
+- Login page, password encryption using bcrypt
 - Optimize routes
 - Ensure everything works so far
 - Style website

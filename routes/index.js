@@ -10,11 +10,10 @@ router.use(function(req, res, next) {
 
   next();
 });
-
-// home page
-router.get('/', (req, res, next) => {
-  res.render('index');
+router.get('/',(req, res, next) => {
+  res.redirect('/login');
 });
+
 
 // login
 router.get('/login', (req, res, next) => {
@@ -32,10 +31,23 @@ router.post('/login', (req, res, next) => {
     } else {
       req.session.userId = user._id;
 
-      return res.redirect('/') ;
+ res.render('users/index', {user:user}) ;
     }
   });
 });
+//
+// //Finding user profile after Login
+//
+// router.get('/', (req, res) => {
+//   User.find({}, 'userId', (err, user) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       res.render('user/:id', { user: user })
+//     }
+//   });
+// });
+
 
 //logout
 router.get('/logout', (req, res, next) => {
@@ -47,7 +59,5 @@ router.get('/logout', (req, res, next) => {
 
   return res.redirect('/login');
 });
-
-module.exports = router;
 
 module.exports = router;
