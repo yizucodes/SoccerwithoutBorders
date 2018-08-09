@@ -10,14 +10,19 @@ router.use(function(req, res, next) {
 
   next();
 });
+
 router.get('/',(req, res, next) => {
   res.redirect('/login');
 });
 
 
+
+
 // login
 router.get('/login', (req, res, next) => {
-  res.render('login');
+  const currentUserId = req.session.userId;
+
+  res.render('login', { title: 'Soccer without Borders', currentUserId: currentUserId });
 });
 
 // POST login
@@ -31,23 +36,10 @@ router.post('/login', (req, res, next) => {
     } else {
       req.session.userId = user._id;
 
- res.render('users/index', {user:user}) ;
+      res.redirect(`/users/${req.session.userId}`) ;
     }
   });
 });
-//
-// //Finding user profile after Login
-//
-// router.get('/', (req, res) => {
-//   User.find({}, 'userId', (err, user) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       res.render('user/:id', { user: user })
-//     }
-//   });
-// });
-
 
 //logout
 router.get('/logout', (req, res, next) => {

@@ -1,3 +1,4 @@
+<!-- Layout HBS {{currentUserId}}-->
 <!DOCTYPE html>
 <html>
 
@@ -19,8 +20,6 @@
     <div class="navbar-brand">
       Soccer Without Borders
     </div>
-
-    <div class="navbar-text">
       {{#if currentUserId}}
         <a class="nav-link" href="/logout">Log Out</a>
       {{else}}

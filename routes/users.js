@@ -5,6 +5,13 @@ const User = require('../models/user');
 
 const auth = require('./helpers/auth')
 
+// // home page
+// router.get('/', (req, res) => {
+//   const currentUserId = req.session.userId;
+//
+//   res.render('index', { title: 'MakeReddit', currentUserId: currentUserId });
+// });
+
 //Users index
 
 router.get('/', (req, res, next) => {
@@ -31,24 +38,44 @@ router.post('/', (req, res, next) => {
     return res.redirect('/users');
   });
 });
-//
-// // Rooms show
-// router.get('/:id', auth.requireLogin, (req, res, next) => {
-//   Room.findById(req.params.id, function(err, room) {
-//     if(err) { console.error(err) };
-//
-//     res.render('rooms/show', { room: room });
-//   });
-// });
 
-//Finding user profile after Login - how do I make this to work?
+// Find user profile after Login
 
-router.get('/login', auth.requireLogin, (req, res) => {
-  User.findbyId(req.params.id, (err, user) => {
+router.get('/:id', auth.requireLogin, (req, res) => {
+  const currentUserId = req.session.userId;
+
+  User.findById(currentUserId, (err, user) => {
     if (err) { console.log(err); }
-    res.render('users/index', { user: user });
+    res.render('users/index', { user: user, title: 'Soccer without Borders', currentUserId: currentUserId });
   });
 });
 
+// User edit profile
+router.get('/:id/edit', auth.requireLogin, (req, res) => {
+  User.findById(req.session.userId, (err, user) => {
+    if (err) { console.error(err); }
+
+    res.render('users/edit', { user });
+  });
+});
+
+// User update profile
+router.post('/:id/edit', (req, res) => {
+  User.findByIdAndUpdate(req.session.userId, { $set: req.body }, (err, user) => {
+    if (err) { console.error(err); }
+
+    console.log(`works: ${user}`)
+    res.redirect(`/users/${req.session.userId}`);
+  });
+});
+
+//
+// router.post('/users/:id/edit', auth.requireLogin, (req, res) => {
+//   User.findByIdAndUpdate(req.session.id, req.body, (err, user) => {
+//     if(err) { console.error(err) };
+//
+//       res.render('/users/');
+//     });
+//   })
 
 module.exports = router;
