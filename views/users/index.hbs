@@ -2,33 +2,46 @@
   <h3>Player Bio</h3>
 </div>
 
-<img src="https://www.flickr.com/photos/jansolo09/5097628957" alt="Profile Image Coming Soon!">
+<img src="/images/CR7_ProfileImage.png" alt="Profile Picture Coming Soon!" height="300" width="300" >
 
 <table class="fullTable mdl-data-table mdl-js-data-table mdl-shadow--2dp">
   <thead>
+    <tbody>
     <tr>
       <th class="mdl-data-table__cell--non-numeric">Name and Last Name</th>
+      <td> {{user.name}} </td>
+    </tr>
+
+    <tr>
       <th>Age</th>
+      <td> {{user.age}} </td>
+    </tr>
+
+    <tr>
       <th>Gender</th>
+      <td> {{user.gender}} </td>
+    </tr>
+
+    <tr>
       <th>Hometown</th>
-      <th>Height (ft.in)</th>
-      <th>Weight (lbs)</th>
-  </thead>
-    <tbody>
+      <td>{{user.hometown}}</td>
+    </tr>
+
       <tr>
-        <td> {{user.name}} </td>
-        <td> {{user.age}} </td>
-        <td> {{user.gender}} </td>
-        <td>{{user.hometown}}</td>
+        <th>Height (ft.in)</th>
         <td>{{user.height}}</td>
-        <td>{{user.weight}}</td>
       </tr>
-      </tbody>
 
-      <div class="text-right">
-        <a href="/users/{{user.id}}/edit" class="btn btn-primary">Update</a>
-      </div>
+      <tr>
+        <th>Weight (lbs)</th>
+        <td>{{user.weight}}</td>
+          <a href="/users/{{user.id}}/edit" class="btn btn-primary">Update</a>
+      </tr>
+    </tbody>
+  </thead>
+</table>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/2sJKHj2YVHc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-  </table>
+<h3>Player Video Highlights</h3>
+  <span>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/2sJKHj2YVHc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </span>
