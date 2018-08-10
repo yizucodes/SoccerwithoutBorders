@@ -2,44 +2,56 @@
   <h3>Player Bio</h3>
 </div>
 
-<img src="/images/CR7_ProfileImage.png" alt="Profile Picture Coming Soon!" height="300" width="300" >
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <img src="/images/CR7_ProfileImage.png" alt="Profile Picture Coming Soon!" height="300" width="300" >
+    </div>
 
-<table class="fullTable mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-  <thead>
-    <tbody>
-    <tr>
-      <th class="mdl-data-table__cell--non-numeric">Name and Last Name</th>
-      <td> {{user.name}} </td>
-    </tr>
+    <div class="col">
+      <div class="table-responsive table-container">
+        <table class="table table-hover">
+        <thead>
+          <tbody>
+          <tr>
+            <th class="mdl-data-table__cell--non-numeric">Name and Last Name</th>
+            <td> {{user.name}} </td>
+          </tr>
 
-    <tr>
-      <th>Age</th>
-      <td> {{user.age}} </td>
-    </tr>
+          <tr>
+            <th>Age</th>
+            <td> {{user.age}} </td>
+          </tr>
 
-    <tr>
-      <th>Gender</th>
-      <td> {{user.gender}} </td>
-    </tr>
+          <tr>
+            <th>Gender</th>
+            <td> {{user.gender}} </td>
+          </tr>
 
-    <tr>
-      <th>Hometown</th>
-      <td>{{user.hometown}}</td>
-    </tr>
+          <tr>
+            <th>Hometown</th>
+            <td>{{user.hometown}}</td>
+          </tr>
 
-      <tr>
-        <th>Height (ft.in)</th>
-        <td>{{user.height}}</td>
-      </tr>
+            <tr>
+              <th>Height (ft.in)</th>
+              <td>{{user.height}}</td>
+            </tr>
 
-      <tr>
-        <th>Weight (lbs)</th>
-        <td>{{user.weight}}</td>
-          <a href="/users/{{user.id}}/edit" class="btn btn-primary">Update</a>
-      </tr>
-    </tbody>
-  </thead>
-</table>
+            <tr>
+              <th>Weight (lbs)</th>
+              <td>{{user.weight}}</td>
+                <a href="/users/{{user.id}}/edit" class="btn btn-primary">Update</a>
+            </tr>
+          </tbody>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+
 
 <h3>Player Video Highlights</h3>
   <span>

@@ -5,13 +5,6 @@ const User = require('../models/user');
 
 const auth = require('./helpers/auth')
 
-// // home page
-// router.get('/', (req, res) => {
-//   const currentUserId = req.session.userId;
-//
-//   res.render('index', { title: 'MakeReddit', currentUserId: currentUserId });
-// });
-
 //Users index
 
 router.get('/', (req, res, next) => {
