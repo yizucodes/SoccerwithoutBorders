@@ -21,9 +21,9 @@
       <h3>Soccer Without Borders</h3>
     </div>
       {{#if currentUserId}}
-        <a href="/logout"><button type="button" class="btn btn-default pull-right">Log Out</button></a>
+        <a href="/logout"><button type="button" class="yi btn btn-default pull-right">Log Out</button></a>
       {{else}}
-        <a href="/login"><button type="button" class="btn btn-default pull-right">Log In</button></a>
+        <a href="/login"><button type="button" class="yi btn btn-default pull-right">Log In</button></a>
       {{/if}}
     </nav>
 
@@ -31,5 +31,20 @@
       {{{body}}}
     </main>
 </body>
+
+<style>
+
+body, html {
+  height: 100%;
+}
+
+body {
+    background-image: url("/images/soccerfield.jpeg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
 
     </html>
