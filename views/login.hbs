@@ -1,19 +1,32 @@
 <form action="/login" method="post">
-    <legend>Log in</legend>
 
-    <div class="form-group">
-        <label for="user-username">Username</label>
-        <input type="text" name="username" class="form-control" id="user-username" placeholder="username">
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <legend>Log in</legend>
+
+      <div class="form-group">
+          <label for="user-username">Username</label>
+          <input type="text" name="username" class="form-control" id="user-username" placeholder="username">
+      </div>
+
+      <div class="form-group">
+          <label for="user-password">Password</label>
+          <input type="password" name="password" class="form-control" id="user-password" placeholder="password">
+      </div>
+
+      <div class="text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <a href="/users/new" class="btn btn-primary">Create New Profile</a>
+      </div>
     </div>
 
-    <div class="form-group">
-        <label for="user-password">Password</label>
-        <input type="password" name="password" class="form-control" id="user-password" placeholder="password">
-    </div>
+  <div class="col-6">
+    <h3 class="text-center">Making soccer accessible to every teenager, one video at a time.</h3>
+  </div>
 
-    <div class="text-center">
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="/users/new" class="btn btn-primary">Create New Profile</a>
-    </div>
+  </div>
+</div>
+
 
 </form>
