@@ -9,7 +9,7 @@ Target audience includes teenagers with a financial constraint that have access 
 ## Experience
 
 From the player perspective, the user will have to log-in, fill required information, upload profile picture and highlight videos.
-![PaperPrototype](/images/PaperPrototype.jpeg)
+[!PaperPrototype](/images/PaperPrototype.jpeg)
 
 # Technical
 ## Models
